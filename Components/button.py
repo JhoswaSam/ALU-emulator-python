@@ -15,6 +15,5 @@ class BUTTON():
         self.height = height
 
         # _init_ create button
-        (ttk.Button(text=self.value, command=self.onAction)).place(x=self.width,y=self.height)
-
+        (ttk.Button(text=self.value, command= self.onAction )).place(x=self.width,y=self.height)
 
