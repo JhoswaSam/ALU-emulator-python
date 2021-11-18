@@ -191,7 +191,3 @@ def division_hexa(nro1, nro2):
         division_hexadecimal = division
     str(division_hexadecimal)
     return division_hexadecimal
-
-
-print(xcion_hexa("3a","b5"))
-print(division_hexa("68E","2"))

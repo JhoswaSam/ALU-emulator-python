@@ -1,10 +1,11 @@
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk 
+from Funtions.Binario import *
+from Funtions.Hexa import *
+from Funtions.Octal import *
 
-def retrieve_input():
-    inputValue=text.get("1.0","end-1c")
-    print(inputValue)
+ 
 
 def btn_click(numbers):
     global operador
@@ -14,15 +15,25 @@ def btn_click(numbers):
 def btn_equals_input():
     global operador
     try:
-        sumup=str(eval(operador))
+        sumup=eval(operador)
     except ZeroDivisionError:
         operador="0"
         var_decimal.set(operador)
+        var.set(operador)
         operador = ""
     else:
-        var_decimal.set(sumup)  
+        #OCTAL
+        
+        var_octal.set(ToOctal(round(sumup)))
+        #HEXADECIMAL
+        var_hexadecimal.set(DecimalAHexa(round(sumup)))
+        #BINARIO
+        var_binario.set(ToBinary(round(sumup)))
+        #DECIMAL
+        var_decimal.set(round(sumup))  
+        #-------
+        var.set(sumup)
         operador = sumup
-        btn_clear_display()
 
 def btn_erase():
     global operador

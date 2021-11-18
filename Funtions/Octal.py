@@ -24,7 +24,7 @@ def ToDecimalOctal(octal):
     return decimal
 
 # Creation of the method OctalAddition
-def OctalAddition(num1,num2)
+def OctalAddition(num1,num2):
     #Declaracion del 1er numero
     num1 = input("Input number 1: ")
     num1 = ("".join(num1[::-1]))
@@ -67,7 +67,7 @@ def OctalAddition(num1,num2)
             h = i #Declaracion de nueva iteracion
             while newList[i] >= 8: #Inicio de repetitiva para transformar en octal
                 newList[i]-8
-                if newList[i]<=7
+                if(newList[i]<=7):
                     break
                 j += 1
 
@@ -83,24 +83,9 @@ def OctalAddition(num1,num2)
         listConverter.append(c1)
     return(converter)
 
-'''
-def min_max(numeros):
-    menor = numeros[0]
-    mayor = numeros[0]
 
-    for n in numeros:
-        if n < menor:
-            menor = n
-
-        if n > mayor:
-            mayor = n
-
-    return menor, mayor
-
-datos = [9, 3, 2, 13, 0, 23, 8, 7]
-
-print(min_max(datos))
-
-'''
 def ToNegativeDecimalOctal(octal):
+    pass
     #Calculando octal
+
+#print(ToOctal(round(9.0)))
